@@ -1,7 +1,7 @@
 import random
 import matplotlib.pyplot as plt
 import pygame
-
+import math
 
 class Ruleta:
     def __init__(self):
@@ -75,20 +75,43 @@ if __name__ == '__main__':
 
     pygame.init()
 
+    # SCREEN_WIDTH = 1600
+    # SCREEN_HEIGHT = 950
+
     SCREEN_WIDTH = 800
     SCREEN_HEIGHT = 600
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
     player = pygame.Rect((300, 250, 50, 50))
+    
 
     run = True
-    
+    a = 30
+    b = 90
+    c = 15
     while run:
 
-        pygame.draw.rect(screen, (255,0,0), player)
+        screen.fill((a,b,c))
+
+        pygame.draw.rect(screen, (50,100,250), player)
+
+        # key = pygame.key.get_pressed()
+        # if (key[pygame.K_a] == True) and (player.left >= 0 ):
+        #     player.move_ip(-1,0)
+        #     print(player.right)
+        # if key[pygame.K_s] == True:
+        #     player.move_ip(0,1)
+        # if key[pygame.K_d] == True and player.right <= SCREEN_WIDTH:
+        #     player.move_ip(1,0)
+        # if key[pygame.K_w] == True:
+        #     player.move_ip(0,-1)
 
         for event in pygame.event.get():
+                
+            
+                
+
             if event.type == pygame.QUIT:
                 run = False
 

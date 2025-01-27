@@ -1,6 +1,6 @@
 import random
 import matplotlib.pyplot as plt
-import pygame
+import pygame as pygame
 import math
 
 class Ruleta:
